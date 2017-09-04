@@ -17,17 +17,18 @@ taiga:
   image: kartoffeltoby/taiga:latest
   restart: always
   links:
+    - postgres:172.20.0.1:5432
     - events
     - rabbit
     - redis
   environment:
     - TAIGA_HOSTNAME=${DOMAIN}
-    - TAIGA_DB_HOST=172.20.0.1
+    - TAIGA_DB_HOST=postgres
     - TAIGA_DB_NAME=taiga
-    - TAIGA_DB_USER=taiga
-    - TAIGA_DB_PASSWORD=password
+    - TAIGA_DB_USER=postgres
+    - TAIGA_DB_PASSWORD=main5311
     - HTTPS_SELF_DOMAIN=${DOMAIN}
-    - TAIGA_SSL=True
+    - TAIGA_SSL=false
     - TAIGA_SLEEP=10
   volumes:
     - ${DATA}:/usr/src/taiga-back/media
