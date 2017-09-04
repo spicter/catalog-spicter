@@ -52,7 +52,7 @@ services:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
       - MONGO_URL=mongodb://172.20.0.1:27017/rocketchat
-      - MONGO_OPLOG_URL=mongodb://172.20.0.1:27017/local
+      - MONGO_OPLOG_URL=mongodb://172.20.0.1:27017/local?replicaSet=001-rs
       - MAIL_URL=smtp://smtp.email
     ports:
       - 3000:3000
