@@ -17,13 +17,12 @@ taiga:
   image: kartoffeltoby/taiga:latest
   restart: always
   links:
-    - postgres:172.20.0.1:5432
     - events
     - rabbit
     - redis
   environment:
     - TAIGA_HOSTNAME=${DOMAIN}
-    - TAIGA_DB_HOST=postgres
+    - TAIGA_DB_HOST=172.20.0.1
     - TAIGA_DB_NAME=taiga
     - TAIGA_DB_USER=postgres
     - TAIGA_DB_PASSWORD=main5311
