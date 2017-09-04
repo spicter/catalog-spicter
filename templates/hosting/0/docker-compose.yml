@@ -11,11 +11,11 @@ services:
     volumes:
       # I recommend specifying a volume that maps to taiga's media,
       # this way uploaded files are not lost during upgrades of the taiga image
-      - ./media:/usr/src/taiga-back/media
+      - /srv/media:/usr/src/taiga-back/media
 
       # If you'd like to store the configuration outside of the container,
       # uncomment this volume. This allows for easy changes to the configuration.
-      - ./conf/taiga:/taiga
+      - /srv/conf/taiga:/taiga
 
       # - ./ssl.crt:/etc/nginx/ssl/ssl.crt:ro # To enable SSL, uncomment this line
       # - ./ssl.key:/etc/nginx/ssl/ssl.key:ro # To enable SSL, uncomment this line
