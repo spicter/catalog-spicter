@@ -77,7 +77,7 @@ services:
     labels:
       - "traefik.enable=false"
     volumes:
-      - ./scripts:/home/hubot/scripts
+      - /srv/scripts:/home/hubot/scripts
   # this is used to expose the hubot port for notifications on the host on port 3001, e.g. for hubot-jenkins-notifier
     ports:
       - 3001:8080
