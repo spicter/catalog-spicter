@@ -43,7 +43,7 @@ services:
       # TAIGA_EMAIL_PORT: 587
       # TAIGA_EMAIL_USER: me@gmail.com
       # TAIGA_EMAIL_PASS: super-secure-pass phrase thing!
-    rocketchat:
+  rocketchat:
     image: rocketchat/rocket.chat:latest
     restart: unless-stopped
     volumes:
