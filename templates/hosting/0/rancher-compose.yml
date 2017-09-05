@@ -29,3 +29,23 @@
       required: true
       default: /home/taiga/conf
       type: "string"
+taiga:
+  scale: 1
+  start_on_create: true
+  health_check:
+    port: 80
+    interval: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2
+rocketchat:
+  scale: 1
+  start_on_create: true
+  health_check:
+    port: 3000
+    interval: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2    
