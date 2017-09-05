@@ -4,7 +4,7 @@ services:
   taiga:
     image: benhutchins/taiga
     ports:
-      - 80:80
+      - 8080:80
       # - 443:443 # To enable SSL, uncomment this line
     # depends_on:
       # - postgres
