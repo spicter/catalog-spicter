@@ -21,12 +21,12 @@ services:
       # - ./ssl.key:/etc/nginx/ssl/ssl.key:ro # To enable SSL, uncomment this line
     environment:
       # Your hostname (REQUIRED)
-      TAIGA_HOSTNAME: cloud03.spicter.com
+      TAIGA_HOSTNAME: pm.app.spicter.com
 
       # Database settings
       # To use an external database, simply update these and remove the postgres
       # service from this docker-compose.yml file
-      TAIGA_DB_NAME: taiga1
+      TAIGA_DB_NAME: taiga
       TAIGA_DB_HOST: 172.20.0.1
       TAIGA_DB_USER: postgres
       TAIGA_DB_PASSWORD: main5311
