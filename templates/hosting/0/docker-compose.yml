@@ -50,9 +50,9 @@ services:
       - /srv/uploads:/app/uploads
     environment:
       - PORT=3000
-      - ROOT_URL=http://localhost:3000
+      - ROOT_URL=http://chat.app.spicter.com
       - MONGO_URL=mongodb://172.20.0.1:27017/rocketchat
-      - MONGO_OPLOG_URL=mongodb://172.20.0.1:27017/local?replicaSet=001-rs
+      - MONGO_OPLOG_URL=mongodb://172.20.0.1:27017/local
       - MAIL_URL=smtp://smtp.email
     ports:
       - 3000:3000
