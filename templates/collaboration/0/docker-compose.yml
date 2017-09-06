@@ -61,10 +61,10 @@ services:
     container_name: onlyoffice-document-server
     image: onlyoffice/documentserver:latest
     labels:
-     - traefik.enable: true
-     - traefik.port: 81
-     - traefik.domain: app.spicter.com
-     - traefik.alias: docs
+      traefik.enable: true
+      traefik.port: 81
+      traefik.domain: app.spicter.com
+      traefik.alias: docs
     stdin_open: true
     tty: true
     restart: always
