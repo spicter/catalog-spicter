@@ -71,8 +71,8 @@ services:
     networks:
       - onlyoffice
     expose:
-      - '81'
-      - '8443'
+      - '81:80'
+      - '8443:443'
     volumes:
        - document_data:/var/www/onlyoffice/Data
        - /srv/document/document_fonts:/usr/share/fonts/truetype/custom
