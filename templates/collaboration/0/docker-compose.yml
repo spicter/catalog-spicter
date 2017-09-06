@@ -71,6 +71,9 @@ services:
     networks:
       - onlyoffice
     expose:
+      - '80'
+      - '443'
+    ports:
       - '81:80'
       - '8443:443'
     volumes:
