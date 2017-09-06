@@ -62,7 +62,7 @@ services:
     image: onlyoffice/documentserver:latest
     labels:
       traefik.enable: true
-      traefik.port: 81
+      traefik.port: 80
       traefik.domain: app.spicter.com
       traefik.alias: docs
     stdin_open: true
@@ -73,9 +73,6 @@ services:
     expose:
       - '80'
       - '443'
-    ports:
-      - '81:80'
-      - '8443:443'
     volumes:
        - document_data:/var/www/onlyoffice/Data
        - /srv/document/document_fonts:/usr/share/fonts/truetype/custom
