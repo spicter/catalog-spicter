@@ -20,11 +20,11 @@ services:
     container_name: onlyoffice-community-server
     image: onlyoffice/communityserver:latest
     labels:
-     - io.rancher.scheduler.affinity:host_label: mail_server=true
-     - traefik.enable: true
-     - traefik.port: 80
-     - traefik.domain: app.spicter.com
-     - traefik.alias: office
+      io.rancher.scheduler.affinity:host_label: mail_server=true
+      traefik.enable: true
+      traefik.port: 80
+      traefik.domain: app.spicter.com
+      traefik.alias: office
     depends_on:
      - onlyoffice-mysql-server
      - onlyoffice-document-server
