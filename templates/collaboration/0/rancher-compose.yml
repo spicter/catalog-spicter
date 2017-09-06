@@ -1,0 +1,27 @@
+.catalog:
+  name: "Collaboration"
+  version: "v1.0.0"
+  description: "Collaboration platform"
+  uuid: collaboration-0
+  minimum_rancher_version: v0.51.0
+
+onlyoffice-community-server:
+  scale: 1
+  start_on_create: true
+  health_check:
+    port: 80
+    interval: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2
+onlyoffice-document-server:
+  scale: 1
+  start_on_create: true
+  health_check:
+    port: 80
+    interval: 30000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    healthy_threshold: 2
