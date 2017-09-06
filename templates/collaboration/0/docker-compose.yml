@@ -14,7 +14,7 @@ services:
     tty: true
     restart: always
     volumes:
-     - ./config/mysql/conf.d:/etc/mysql/conf.d 
+     - /srv/mysql/config/mysql/conf.d:/etc/mysql/conf.d 
      - mysql_data:/var/lib/mysql
   onlyoffice-community-server:
     container_name: onlyoffice-community-server
@@ -56,7 +56,7 @@ services:
      - community_data:/var/www/onlyoffice/Data
      - community_log:/var/log/onlyoffice
      - document_data:/var/www/onlyoffice/DocumentServerData
-     - ./certs:/var/www/onlyoffice/Data/certs
+     - /srv/community/certs:/var/www/onlyoffice/Data/certs
   onlyoffice-document-server:
     container_name: onlyoffice-document-server
     image: onlyoffice/documentserver:latest
@@ -75,7 +75,7 @@ services:
       - '8443'
     volumes:
        - document_data:/var/www/onlyoffice/Data
-       - ./document_fonts:/usr/share/fonts/truetype/custom
+       - /srv/document/document_fonts:/usr/share/fonts/truetype/custom
        - document_log:/var/log/onlyoffice
   onlyoffice-mail-server:
     container_name: onlyoffice-mail-server
