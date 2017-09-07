@@ -25,7 +25,7 @@ services:
       io.rancher.scheduler.affinity:host_label: mail_server=true
       traefik.enable: true
       traefik.port: 80
-      traefik.domain: app.spicter.com
+      traefik.domain: cloud.spicter.com
       traefik.alias: office
     depends_on:
      - onlyoffice-mysql-server
@@ -66,7 +66,7 @@ services:
       io.rancher.scheduler.affinity:host_label: mail_server=true
       traefik.enable: true
       traefik.port: 80
-      traefik.domain: app.spicter.com
+      traefik.domain: cloud.spicter.com
       traefik.alias: docs
     stdin_open: true
     tty: true
